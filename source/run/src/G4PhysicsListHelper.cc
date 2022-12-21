@@ -814,6 +814,16 @@ void G4PhysicsListHelper::ReadInDefaultOrderingParameter()
   theTable->push_back(tmp);
   sizeOfTable += 1;
 
+  tmp.processTypeName = "MuToMuMu";
+  tmp.processType     = fElectromagnetic;
+  tmp.processSubType  = fMuonPairProdByCharged;
+  tmp.ordering[0]     = -1;
+  tmp.ordering[1]     = -1;
+  tmp.ordering[2]     = 1000;
+  tmp.isDuplicable    = false;
+  theTable->push_back(tmp);
+  sizeOfTable += 1;
+
   tmp.processTypeName = "GammaSuper";
   tmp.processType     = fElectromagnetic;
   tmp.processSubType  = fGammaGeneralProcess;
