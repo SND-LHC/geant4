@@ -68,7 +68,7 @@ G4UserPhysicsListMessenger(G4VUserPhysicsList* pParticleList)
   setCutCmd = new G4UIcmdWithADoubleAndUnit("/run/setCut", this);
   setCutCmd->SetGuidance("Set default cut value ");
   setCutCmd->SetParameterName("cut", false);
-  setCutCmd->SetDefaultValue(1.0);
+  setCutCmd->SetDefaultValue(0.1);
   setCutCmd->SetRange("cut >=0.0");
   setCutCmd->SetDefaultUnit("mm");
   setCutCmd->AvailableForStates(G4State_PreInit, G4State_Idle);
@@ -79,12 +79,12 @@ G4UserPhysicsListMessenger(G4VUserPhysicsList* pParticleList)
   setCutForAGivenParticleCmd->SetGuidance(
     "Set a cut value to a specific particle ");
   setCutForAGivenParticleCmd->SetGuidance(
-    "Usage: /run/setCutForAGivenParticle  gamma  1. mm");
+    "Usage: /run/setCutForAGivenParticle  gamma 0.1 mm");
   param = new G4UIparameter("particleName", 's', false);
   param->SetParameterCandidates("e- e+ gamma proton");
   setCutForAGivenParticleCmd->SetParameter(param);
   param = new G4UIparameter("cut", 'd', false);
-  param->SetDefaultValue("1.");
+  param->SetDefaultValue("0.1");
   param->SetParameterRange("cut>=0.0");
   setCutForAGivenParticleCmd->SetParameter(param);
   param = new G4UIparameter("unit", 's', false);
