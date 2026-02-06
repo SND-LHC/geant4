@@ -282,7 +282,7 @@ class G4VUserPhysicsList
 
     G4int verboseLevel = 1;
 
-    G4double defaultCutValue = 1.0;
+    G4double defaultCutValue = 0.1;
       // Default cut value for all particles
     G4bool isSetDefaultCutValue = false;
 

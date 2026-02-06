@@ -87,7 +87,7 @@ G4VUserPhysicsList::G4VUserPhysicsList()
 {
   g4vuplInstanceID = subInstanceManager.CreateSubInstance();  // AND
   // default cut value  (1.0mm)
-  defaultCutValue = 1.0 * mm;
+  defaultCutValue = 0.1 * mm;
 
   // pointer to the particle table
   theParticleTable = G4ParticleTable::GetParticleTable();
