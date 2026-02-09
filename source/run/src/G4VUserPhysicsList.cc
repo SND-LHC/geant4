@@ -97,7 +97,7 @@ G4VUserPhysicsList::G4VUserPhysicsList()
   fCutsTable = G4ProductionCutsTable::GetProductionCutsTable();
 
   // set energy range for SetCut calcuration
-  fCutsTable->SetEnergyRange(0.01 * keV, 100 * TeV);
+  fCutsTable->SetEnergyRange(1 * eV, 100 * TeV);
 
   // UI Messenger
   // theMessenger = new G4UserPhysicsListMessenger(this);
